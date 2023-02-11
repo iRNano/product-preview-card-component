@@ -1,0 +1,181 @@
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+@import './mixins';
+body{
+    margin:0;
+    padding: 0;
+    background-color: hsl(30, 38%, 92%);
+    .product-container{
+        background-color: hsl(30, 38%, 92%);
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        padding: 1.8em 1em;
+        @include sm{
+            min-height: 100vh;
+            padding:0;
+        }
+        flex-direction: column;
+    }
+    .product-card{
+        font-family: Montserrat;
+        font-weight: 500;
+        background-color: hsl(0, 0%, 100%);
+        color: hsl(228, 12%, 48%);
+        display: flex;
+        flex-direction: column;
+        // min-height: calc(100vh - 2em);
+        border-radius: 10px;
+        @include sm{
+            flex-direction: row;
+            max-width: 41.7vw;
+            min-height: 50vh;
+            margin: 0 auto;
+        }
+        &-img{
+            @include sm{
+                width: 50%;
+            }
+            
+            img {
+                width: 100%;
+                background-size:cover;
+                min-height: 30vh;
+                border-radius: 10px 10px 0 0;
+            }
+
+            img.desktop{
+                display:none
+            }
+            @include sm{
+                img {
+                    border-radius: 10px 0 0 10px;
+                    height: 100%;
+                }
+                img.mobile{
+                    display: none;
+                }
+
+                img.desktop{
+                    display:block;
+                }
+                
+            }
+        }
+
+        &-description{
+            
+            flex-grow: 1;
+            @include sm{
+                width: calc(50% - 5.2em);
+                padding: 2.6em;
+            }
+            border-radius: 0 0 5% 5%;
+            padding:1.7em 2em 2em 2em;
+            font-size:12px;
+            display:flex;
+            flex-direction: column;
+            .san-serif{
+                font-family: Fraunces;
+                font-size: 32px
+            }
+            
+            &-category{
+                letter-spacing: 5px;
+                margin-bottom: 1em;
+
+                @include sm{
+                    margin-bottom: 1.8em;
+                }
+            }
+
+            &-details{
+                // flex-grow:2;
+                margin-bottom: 0.4em;
+
+                @include sm{
+                    margin-bottom: 0em;
+                }
+            }
+            &-info{
+                line-height: 23px;
+                font-size: 14px;
+                letter-spacing: 0.11px;
+                margin: 1.11em 0;
+
+                @include sm{
+                    margin: 1.78em 0;
+                }
+            }
+            &-name{
+                color: hsl(212, 21%, 14%);
+                line-height: 32px;
+                letter-spacing: -.3px;
+            }
+
+            &-price{
+                display: flex;
+                align-items: center;
+                color:hsl(158, 36%, 37%);
+                margin-bottom: .5em;
+                letter-spacing: -.2px;
+                
+                @include sm{
+                    margin-bottom: .8em;
+                }
+                .discounted{
+                    margin-left:1.45em;
+                    font-size: 13px;
+                    text-decoration: line-through;
+                    color: hsl(228, 12%, 48%);
+                    font-family: Montserrat;
+                }
+            }
+            &-button{
+                font-family: Montserrat;
+                font-weight:700;   
+                background-color: hsl(158, 36%, 37%);
+                color: #fff;
+                width: 100%;
+                border-radius: 5px;
+                padding: 1.2em;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border:none;
+                letter-spacing: .6px;
+                svg{
+                    margin-right: .9em;
+                }
+            }
+
+            &-button:hover{
+                cursor: pointer;
+            }
+
+            
+
+   
+
+        }
+    }
+
+    .attribution{
+        padding:2em;
+        text-align: center;
+    }
+
+
+}
