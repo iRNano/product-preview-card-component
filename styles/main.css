@@ -136,7 +136,7 @@ body .product-card-description-button {
   font-family: Montserrat;
   font-weight: 700;
   background-color: hsl(158deg, 36%, 37%);
-  color: #fff;
+  color: hsl(0deg, 0%, 100%);
   width: 100%;
   border-radius: 5px;
   padding: 1.2em;
@@ -151,6 +151,7 @@ body .product-card-description-button svg {
 }
 body .product-card-description-button:hover {
   cursor: pointer;
+  background-color: hsl(158deg, 36%, 20%);
 }
 body .attribution {
   padding: 2em;

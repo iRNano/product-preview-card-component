@@ -147,7 +147,7 @@ body{
                 font-family: Montserrat;
                 font-weight:700;   
                 background-color: hsl(158, 36%, 37%);
-                color: #fff;
+                color: hsl(0, 0%, 100%);
                 width: 100%;
                 border-radius: 5px;
                 padding: 1.2em;
@@ -158,12 +158,12 @@ body{
                 letter-spacing: .6px;
                 svg{
                     margin-right: .9em;
-                    background-color: hsl(158, 36%, 20%);
                 }
             }
 
             &-button:hover{
                 cursor: pointer;
+                background-color: hsl(158, 36%, 20%);
             }
 
             
